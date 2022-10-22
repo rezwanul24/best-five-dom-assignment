@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select best five</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <style>
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+
+    }
+
+    .header h1 {
+      color: red;
+      text-align: center;
+    }
+
+    .header p {
+      color: white;
+      text-align: center;
+    }
+
+    #header-area {
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .card img {
+      width: 100%;
+    }
+
+    .body {
+      width: 80%;
+    }
+
+    .sidebar {
+      width: 20%;
+    }
+
+    .footer {
+      text-align: center;
+      background-color: black;
+      height: 200px;
+      align-items: center;
+      padding: 50px;
+      color: white;
+
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <div id="header-area">
+      <h1>Secelect your best five</h1>
+      <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit <br> officia consequat duis
+        enim velit mollit. Exercitation veniam consequat sunt <br> nostrud amet.</p>
+    </div>
+  </section>
+  <div class="splite mt-5 d-flex">
+    <section class="body w-60 container border">
+
+
+      <div class="row">
+        <div class="card col-4">
+          <img src="./image/messi.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 id="player-1" class="card-title">Messi</h5>
+            <p class="card-text">36 Goals
+              <b>.</b>
+              120 Assist
+            </p>
+            <button id="first-btn" onclick="myFunction(1)" class="btn btn-primary text-center w-100">Select</button>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <img src="./image/nymar.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 id="player-2" class="card-title">Neymar Jr</h5>
+            <p class="card-text">36 Goals
+              <b>.</b>
+              120 Assist
+            </p>
+            <button id="secend-btn" onclick="myFunction(2)" class="btn btn-primary text-center w-100">Select</button>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <img src="./image/mbappe.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 id="player-3" class="card-title player-3">Kylian Mbappé</h5>
+            <p class="card-text">36 Goals
+              <b>.</b>
+              120 Assist
+            </p>
+            <button id="thard-btn" onclick="myFunction(3)" class="btn btn-primary text-center w-100">Select</button>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <img src="./image/Rectangle 144 (1).png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 id="player-4" class="card-title ">Vítor Machado</h5>
+            <p class="card-text">36 Goals
+              <b>.</b>
+              120 Assist
+            </p>
+            <button id="forth-btn" onclick="myFunction(4)" class="btn btn-primary text-center w-100">Select</button>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <img src="./image/Rectangle 144 (2).png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 id="player-5" class="card-title">Sergio Ramos</h5>
+            <p class="card-text">36 Goals
+              <b>.</b>
+              120 Assist
+            </p>
+            <button type="button" id="fifth-btn" onclick="myFunction(5)"
+              class="btn btn-primary text-center w-100">Select</button>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <img src="./image/Rectangle 144 (3).png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 id="player-6" class="card-title ">Renato Sanches</h5>
+            <p class="card-text">36 Goals
+              <b>.</b>
+              120 Assist
+            </p>
+            <button id="six-btn" onclick="myFunction(6)" class="btn btn-primary text-center w-100">Select</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sidebar w-40 split border">
+      <h3 class="text-center">select v</h3>
+      <ol id="player-list">
+
+      </ol>
+
+      <div class="card-body">
+        <h3 class="card-title text-center ">Budget</h3>
+        <div class="border-bottom border-danger mb-2">
+        </div>
+        <div class="d-flex align-items-center
+                justify-content-center">
+          <p class="card-text w-50 mt-2 fw-bold">Per
+            Player</p>
+          <input id="perplayer-input" class="w-75 p-1" type="number" name="" id="">
+        </div>
+        <button type="button" id="btn-calculate" class="btn
+                btn-primary px-5 py-2 fw-bolder ms-5 mt-3
+                rounded-0">Calculate</button>
+
+        <div class="d-flex mt-4 fw-bolder fs-5
+                justify-content-between">
+          <p>Player Expenses</p>
+          <p>$<span id="expenses-toatl">0000</span></p>
+        </div>
+
+        <div class="d-flex align-items-center
+                justify-content-center">
+          <p class="card-text w-50 mt-2 fw-bold">Manager</p>
+          <input class="w-75 p-1" type="number" name="" id="manager-input">
+        </div>
+        <div class="d-flex align-items-center
+                justify-content-center">
+          <p class="card-text w-50 mt-2 fw-bold">Coach</p>
+          <input class="w-75 p-1" type="number" name="" id="coach-input">
+        </div>
+        <button id="calculate-total" type="button" class="btn btn-primary px-5 py-2 fw-bolder ms-4
+                mt-3 rounded-0">Calculate Total</button>
+
+        <div class="d-flex justify-content-between mt-4
+                fw-bold">
+          <p>Total</p>
+          <p class="text-danger">$<span id="total-amount">0000</span></p>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <section class="footer">
+    <h3>Copyright @ 2022 All Rights Reserved</h3>
+  </section>
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./javascript.js"></script>
+
+</body>
+
+</html>
